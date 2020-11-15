@@ -10,8 +10,8 @@ def main():
     matrix = generate_matrix(
         args.board_grid, args.unit_grid, args.unit_n, args.positions)
     make_dir(args.outdir)
-    save_matrix(matrix, args.file_name, args.outdir)
-    save_fig(matrix, args.file_name, args.outdir)
+    save_matrix(matrix, args.file_name)
+    save_fig(matrix, args.file_name)
 
     # raise NotImplementedError  # TODO 使用导入的函数按命令行参数生成数据，包括 mat 文件与 jpg 文件
 
