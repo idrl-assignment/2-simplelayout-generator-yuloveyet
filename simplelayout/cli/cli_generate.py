@@ -1,5 +1,6 @@
 import argparse
 import sys
+from pathlib import Path
 
 
 def get_options():
@@ -26,4 +27,16 @@ def get_options():
         if i > (options.board_grid/options.unit_grid)**2 or i < 1:
             print('modify positions num')
             sys.exit(1)
+
+    if not Path(options.outdir).exists():
+        Path(options.outdir).mkdir(parents=True, exist_ok=True)
+    file1 = options.outdir + '/' + options.file_name + '.mat'
+    file2 = options.outdir + '/' + options.file_name + '.jpg'
+    fo1 = open(file1, 'w')
+    fo2 = open(file2, 'w')
+    # fo1.write('test/n')
+    # fo2.write('test')
+    fo1.close()
+    fo2.close()
+
     return options
