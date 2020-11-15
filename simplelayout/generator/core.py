@@ -22,7 +22,7 @@ def generate_matrix(
                        centre[k, 0]+size+1, 1):
             for j in range(centre[k, 1]-size+1,
                            centre[k, 1]+size+1, 1):
-                matrix_samples[j-1, i-1] = 1
+                matrix_samples[i-1, j-1] = 1  # ! from left to right firstly, then top to bottom
 
     return matrix_samples
     """生成指定布局矩阵
