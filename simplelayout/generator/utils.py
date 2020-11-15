@@ -23,7 +23,7 @@ def save_fig(matrix, file_name, outdir):
     plt.title('simple_layout')
     # plt.show(im)
 
-    save_name = Path(outdir, file_name+'.png')
+    save_name = Path(outdir, file_name+'.jpg')
     fig.savefig(save_name, dpi=300)
     plt.close()
     # raise NotImplementedError
