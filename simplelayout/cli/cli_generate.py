@@ -30,6 +30,7 @@ def get_options():
 
     if not Path(options.outdir).exists():
         Path(options.outdir).mkdir(parents=True, exist_ok=True)
+
     file1 = options.outdir + '/' + options.file_name + '.mat'
     file2 = options.outdir + '/' + options.file_name + '.jpg'
     fo1 = open(file1, 'w')
