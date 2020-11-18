@@ -9,6 +9,7 @@ def main():
     matrix = generate_matrix(
         args.board_grid, args.unit_grid, args.unit_n, args.positions)
     make_dir(args.outdir)
+    # use '/' to seperate the path and name
     file_name = args.outdir + '/'+args.file_name
     save_matrix(matrix, file_name)
     save_fig(matrix, file_name)
