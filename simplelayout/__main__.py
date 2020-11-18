@@ -1,6 +1,6 @@
 # TODO 正确导入函数 generate_matrix, save_matrix, save_fig
-# from simplelayout.cli import get_options  # TODO: 保证不修改本行也可以正确导入
-from simplelayout.cli.cli_generate import get_options
+from simplelayout.cli import get_options  # TODO: 保证不修改本行也可以正确导入
+# from simplelayout.cli.cli_generate import get_options
 from simplelayout.generator.utils import save_matrix, save_fig, make_dir
 from simplelayout.generator.core import generate_matrix
 
@@ -10,9 +10,9 @@ def main():
     matrix = generate_matrix(
         args.board_grid, args.unit_grid, args.unit_n, args.positions)
     make_dir(args.outdir)
-    file_name = args.outdir+args.file_name
+    file_name = args.outdir + '/'+args.file_name
     save_matrix(matrix, file_name)
-    save_fig(matrix, args.file_name)
+    save_fig(matrix, file_name)
 
     # raise NotImplementedError  # TODO 使用导入的函数按命令行参数生成数据，包括 mat 文件与 jpg 文件
 
